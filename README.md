@@ -101,8 +101,9 @@ graph TD;
     Cadastros --> Produtos;
     Produtos --> Novo;
     Produtos --> Deletar;
-    Deletar --> Confirma;
-    Confirma --> Produtos;
+    Produtos --> Editar;
+    Deletar --> Produtos;
+    Editar --> Salvar;
     Novo --> Salvar;
 ```
 
