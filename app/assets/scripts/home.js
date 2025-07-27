@@ -25,7 +25,7 @@ window.addEventListener("load", async function(event) {
           document.getElementById("nameUserLogged").textContent = result.message;
           return;
         } else {
-          window.location.href = '/sistema/public/central.html'; // Redireciona para página de login
+          window.location.href = '/public/central.html'; // Redireciona para página de login
         }
     } catch (error) {
     }
@@ -150,7 +150,7 @@ document.getElementById("user").addEventListener("click", async function(event) 
       const result = await callAPI("login/exit");
 
       if (result.status === 'success') {
-        window.location.href = '/sistema/public/central.html'; // Redireciona para página de login
+        window.location.href = '/public/central.html'; // Redireciona para página de login
       } else {
         notificacao(result.status, result.message);
       }
