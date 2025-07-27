@@ -115,6 +115,10 @@ graph TD;
     Cadastros --> Cupons;
     Cupons --> Novo;
     Novo --> Salvar;
+    Cupons --> Inutilizar;
+    Cupons --> Editar;
+    Inutilizar --> Cupons;
+    Editar --> Salvar;
 ```
 
 Diagrama de funcionamento da compra:
