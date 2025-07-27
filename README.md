@@ -88,12 +88,14 @@ Principais links:
 
 ### Bonus
 
-**Histórico de compras**<br>
+**Histórico de compras**
 - [X]   Inserir um sistema de logs de compras de ingressos/produtos.
 - [X]   Permitir que o usuário veja todas as compras feitas
-**Geração de comprovante em PDF**<br>
+      
+**Geração de comprovante em PDF**
 - [X]   Usado `dompdf/dompdf`
-**Códigos de desconto / cupom**<br>
+      
+**Códigos de desconto / cupom**
 - [X]   Campo promocional que reduz o preço
       
 ---
