@@ -102,7 +102,7 @@ graph TD;
     Produtos --> Novo;
     Produtos --> Deletar;
     Deletar --> Confirma;
-    Deletar --> Produtos;
+    Confirma --> Produtos;
     Novo --> Salvar;
 ```
 
