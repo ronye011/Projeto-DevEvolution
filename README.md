@@ -150,3 +150,11 @@ graph TD;
     Sistema--> Logs;
     Logs --> Compras;
 ```
+
+Diagrama de funcionamento dos clientes (interno):
+
+```mermaid
+graph TD;
+    FinalizarCompra --> Cria/Edita;
+    Salvar --> VinculaCompra;
+```
