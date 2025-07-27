@@ -86,9 +86,9 @@ Diagrama de funcionamento da compra:
 
 ```mermaid
 graph TD;
-    Comprar--> Tela com o detalhamento do produto;
-    Tela com o detalhamento do produto --> Comprar2;
-    Comprar2 --> Finalizar compra;
-    Comprar2 --> Aplicar o desconto;
-    Aplicar o desconto --> Finalizar compra;
+    Comprar--> Detalhamento;
+    Detalhamento --> Comprar2;
+    Comprar2 --> Finalizar;
+    Comprar2 --> Desconto;
+    Desconto --> Finalizar;
 ```
