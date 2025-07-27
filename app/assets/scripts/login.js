@@ -12,7 +12,7 @@ window.addEventListener("load", async function(event) {
         const result = JSON.parse(text);
 
         if (result.status === 'success') {
-            window.location.href = '/sistema/public/home.html'; // Redireciona para página protegida
+            window.location.href = '/public/home.html'; // Redireciona para página protegida
         }
     } catch (error) {
     }
@@ -36,7 +36,7 @@ document.getElementById('login').addEventListener('submit', async function (e) {
     const result = JSON.parse(text);
 
     if (result.status == 'success') {
-        window.location.href = '/sistema/public/home.html'; // Redireciona para página protegida
+        window.location.href = '/public/home.html'; // Redireciona para página protegida
     } else {
         notificacao(result.status, result.message);
     }
