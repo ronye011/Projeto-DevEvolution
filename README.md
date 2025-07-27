@@ -1,10 +1,21 @@
-# Projeto-DevEvolution
-Sistema de vendas de produtos desenvolvido para a imersão Dev{Evolution}, promovida pela IXC Soft S.A.
+# 🚀 Projeto DevEvolution – SALES+/BUY+
 
-## 📄 Descrição
+Sistema de vendas de produtos desenvolvido durante a imersão **Dev{Evolution}**, promovida pela **IXC Soft S.A.**  
+Este projeto foi construído com base na arquitetura **MVC**, implementando funcionalidades como cadastro de produtos, usuários, cupons, controle de estoque e geração de comprovantes em PDF.
 
-O **SALES+/BUY+** é um sistema que permite cadastrar produtos, usuarios, cupons e gera comprovantes de pagamento e realizar a compra.
-É um MVC, logo algumas funcionalidades podem parecer incompletas, mas todo projeto foi feito com muito empenho no periodo de duas semanas que tive para realizar.
+---
+
+## Descrição
+
+O **SALES+/BUY+** é um sistema de gestão de vendas que permite:
+
+- Gerenciar usuários, produtos e cupons.
+- Realizar compras com reserva de estoque.
+- Gerar comprovantes em PDF.
+- Aplicar descontos promocionais via cupons.
+- Visualizar logs e histórico de compras.
+
+> Algumas funcionalidades podem estar incompletas, pois o sistema foi desenvolvido em apenas duas semanas.
 
 ---
 
@@ -156,5 +167,6 @@ Diagrama de funcionamento dos clientes (interno):
 ```mermaid
 graph TD;
     FinalizarCompra --> Cria/Edita;
+    Cria/Edita --> Salvar;
     Salvar --> VinculaCompra;
 ```
