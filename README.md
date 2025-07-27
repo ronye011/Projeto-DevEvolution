@@ -56,6 +56,7 @@ Principais links:
 - `http://localhost/sistema/public/` Login do painel
 - `http://localhost/sistema/public/home.html` Painel de Administração
 - `http://localhost/sistema/public/central.html` Local de compra pelo cliente
+  
 ---
 
 ### O que foi implementado?
@@ -83,14 +84,18 @@ Principais links:
 - [X]  Cancelar reserva após timeout (2 minutos)
 - [X]  Exibir mensagem de "Produto indisponível" se esgotado
 
+---
+
 ### Bonus
-      **Histórico de compras**
+
+**Histórico de compras**
 - [X]   Inserir um sistema de logs de compras de ingressos/produtos.
 - [X]   Permitir que o usuário veja todas as compras feitas
-      **Geração de comprovante em PDF**
+**Geração de comprovante em PDF**
 - [X]   Ex: usar `mpdf/mpdf` ou `dompdf/dompdf`
-      **Códigos de desconto / cupom**
+**Códigos de desconto / cupom**
 - [X]   Campo promocional que reduz o preço
+      
 ---
 
 Diagrama de funcionamento da compra:
