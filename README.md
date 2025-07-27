@@ -59,6 +59,13 @@ Principais links:
   
 ---
 
+## Após a instalação, para logar no sistema pode ser utlizado as seguintes credenciais para teste.
+
+Email: adm@adm.com
+Senha: teste
+
+---
+
 ### O que foi implementado?
 
 ### Usuários
