@@ -87,9 +87,9 @@ Diagrama de funcionamento da compra:
 ```mermaid
 graph TD;
     Comprar--> Detalhamento;
-    Detalhamento --> 'Comprar 2';
-    'Comprar 2' --> Finalizar;
-    'Comprar 2' --> Desconto;
+    Detalhamento --> Comprar2;
+    Comprar2 --> Finalizar;
+    Comprar2 --> Desconto;
     Desconto --> Finalizar;
 ```
 
@@ -97,20 +97,30 @@ Diagrama de funcionamento do produto:
 
 ```mermaid
 graph TD;
-    Comprar--> Detalhamento;
-    Detalhamento --> Comprar2;
-    Comprar2 --> Finalizar;
-    Comprar2 --> Desconto;
-    Desconto --> Finalizar;
+    Sistema --> Cadastros;
+    Cadastros --> Produtos;
+    Produtos --> Novo;
+    Produtos --> Deletar;
+    Deletar --> Confirma;
+    Deletar --> Produtos;
+    Novo --> Salvar;
 ```
 
 Diagrama de funcionamento do cupom:
 
 ```mermaid
 graph TD;
-    Comprar--> Detalhamento;
-    Detalhamento --> Comprar2;
-    Comprar2 --> Finalizar;
-    Comprar2 --> Desconto;
-    Desconto --> Finalizar;
+    Sistema--> Cadastros;
+    Cadastros --> Cupons;
+    Cupons --> Novo;
+    Novo --> Salvar;
+```
+
+Diagrama de funcionamento da compra:
+
+```mermaid
+graph TD;
+    Sistema--> Vendas;
+    Vendas --> Comprovante;
+    Comprovante --> Imprimir;
 ```
