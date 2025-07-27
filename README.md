@@ -120,6 +120,19 @@ graph TD;
     Inutilizar --> Cupons;
     Editar --> Salvar;
 ```
+Diagrama de funcionamento de usuarios:
+
+```mermaid
+graph TD;
+    Sistema--> Configurações;
+    Configurações --> Usuarios;
+    Usuarios --> Novo;
+    Usuarios --> Editar;
+    Usuarios --> Inativar/Ativar;
+    Novo --> Salvar;
+    Editar --> Salvar;
+    Inativar/Ativar --> Usuarios;
+```
 
 Diagrama de funcionamento da compra:
 
@@ -128,4 +141,12 @@ graph TD;
     Sistema--> Vendas;
     Vendas --> Comprovante;
     Comprovante --> Imprimir;
+```
+
+Diagrama de funcionamento dos logs_compra:
+
+```mermaid
+graph TD;
+    Sistema--> Logs;
+    Logs --> Compras;
 ```
