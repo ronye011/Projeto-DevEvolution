@@ -127,11 +127,11 @@ graph TD;
     Sistema--> Configurações;
     Configurações --> Usuarios;
     Usuarios --> Novo;
-    Usuarios --> Editar;
     Usuarios --> Inativar/Ativar;
+    Inativar/Ativar --> Usuarios;
+    Usuarios --> Editar;
     Novo --> Salvar;
     Editar --> Salvar;
-    Inativar/Ativar --> Usuarios;
 ```
 
 Diagrama de funcionamento da compra:
