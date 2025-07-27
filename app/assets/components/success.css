@@ -1,0 +1,88 @@
+#sucesso {
+  font-family: sans-serif;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.divCenter {
+  display: flex;
+  flex-direction: column; /* Empilha o título, parágrafo e botão verticalmente */
+  align-items: center;     /* Centraliza horizontalmente */
+  justify-content: center; /* Opcional: centraliza verticalmente se necessário */
+  text-align: center;      /* Centraliza o texto dentro dos blocos */
+}
+
+.closeSucesso {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    color: red;
+    font-weight: normal;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.closeSucesso:hover {
+    color: black;
+}
+
+.congratulation-wrapper {
+    position: relative;
+    max-width: 550px;
+    margin-inline: auto;
+    padding: 40px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.congratulation-contents.center-text .congratulation-contents-icon {
+    margin-inline: auto;
+}
+.congratulation-contents-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    background-color: #65c18c;
+    color: #fff;
+    font-size: 50px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.congratulation-contents-title {
+    font-size: 32px;
+    line-height: 36px;
+    margin: -6px 0 0;
+}
+.congratulation-contents-para {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 15px;
+}
+.btn-wrapper {
+    display: block;
+}
+.cmn-btn.btn-bg-1 {
+    background: #3d43ff;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius:3px;
+    text-decoration: none;
+    padding:5px;
+}
+
+.cmn-btn.btn-bg-1:hover {
+    background: #4796ea;
+}

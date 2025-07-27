@@ -1,0 +1,155 @@
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css');
+
+body {
+  color: #626262;
+  background: white;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar-toggle {
+  margin-left: -240px;
+}
+
+.initH1 {
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+  color: white;
+}
+
+.initImg {
+  display: block;
+  margin: 0 auto;
+}
+
+.init {
+  height: 100vh;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar {
+  width: 240px;
+  height: 100%;
+  background: #535353;
+  position: absolute;
+  transition: all .3s ease-in-out;
+  z-index: 100;
+}
+
+#leftside-navigation ul, 
+#leftside-navigation ul ul {
+  margin: -2px 0 0;
+  padding: 0;
+}
+
+#leftside-navigation ul li {
+  list-style-type: none;
+  border-bottom: 1px solid rgba(11, 11, 11, 0.05);
+}
+
+#leftside-navigation ul li.active > a {
+  color: #ff0000;
+}
+
+#leftside-navigation ul li.active ul {
+  display: block;
+}
+
+#leftside-navigation ul li a {
+  color: #aeaeae;
+  text-decoration: none;
+  display: block;
+  padding: 18px 0 18px 25px;
+  font-size: 12px;
+  outline: 0;
+  transition: all 200ms ease-in;
+}
+
+#leftside-navigation ul li a:hover {
+  color: #ff0000;
+}
+
+#leftside-navigation ul li a span {
+  display: inline-block;
+}
+
+#leftside-navigation ul li a i {
+  width: 20px;
+}
+
+#leftside-navigation ul li a i.fa-angle-left,
+#leftside-navigation ul li a i.fa-angle-right {
+  padding-top: 3px;
+}
+
+#leftside-navigation ul ul {
+  display: none;
+}
+
+#leftside-navigation ul ul li {
+  background: #393939;
+  margin: 0;
+  border-bottom: none;
+}
+
+#leftside-navigation ul ul li a {
+  font-size: 12px;
+  padding: 13px 25px;
+  color: #aeb2b7;
+}
+
+.user-info {
+  display: flex;
+  position: fixed;
+  width: 210px;
+  top: 5px;
+  margin-left: 5px;
+  background-color: #212121;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.user-name {
+  font-weight: 350;
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+  cursor: default;
+}
+
+.logout-icon {
+  color: white;
+  height: 25px;
+  width: 25px;
+  margin-top: 7px;
+  margin-left: auto;
+}
+
+.margin_bottom, .margin_top {
+  list-style-type: none;
+}
+
+.margin_top {
+  margin-top: 75px;
+}
+
+.margin_bottom {
+  padding-top: 2%;
+}
+
+.content_menu {
+  margin-left: 240px;
+  background-color: #4c4c4c;
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}

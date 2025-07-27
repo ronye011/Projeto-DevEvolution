@@ -1,0 +1,228 @@
+.modal {
+  font-family: sans-serif;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.modal-content {
+  justify-content: space-between;
+  border-radius: 15px;
+  overflow-y: auto; /* Adiciona rolagem vertical */
+  background: #ececec;
+  width: 90%;
+  height: 85%;
+  max-width: 90%;
+  max-height: 85%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  display: flex; /* Habilita o flexbox no conteúdo do modal */
+  flex-direction: row; /* Alinha os elementos verticalmente */
+}
+
+.data {
+  margin-top: 50px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.descricao legend {
+    font-size: 18px;
+    font-weight: 700;
+    color: #18181B;
+    margin: 0 0 5px;
+    margin-bottom: -10px;
+    letter-spacing: -.5px;
+    font-family: sans-serif;
+    list-style-type: none;
+    color: black;
+}
+
+.descricao p {
+    font-size: 14px;
+    color: #38383d;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    margin-left: 5px;
+    word-break: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+    margin-right: 50px;
+}
+
+.estoque legend {
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  margin: 0 0 5px;
+  letter-spacing: -0.5px;
+  font-family: sans-serif;
+}
+
+.group {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline; /* alinha os textos numericamente */
+  gap: 4px;              /* espaço entre número e texto */
+}
+
+.estoque p {
+  font-weight: 700;
+  font-size: 14px;
+  color: #53535b;
+  margin: 0;
+  word-break: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.estoque .quantidade {
+  color: #000; /* destaca a quantidade, se desejar */
+}
+
+
+.preco legend {
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  margin: 0 0 10px;
+  letter-spacing: -0.5px;
+  font-family: sans-serif;
+}
+
+.value {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline; /* alinha os textos numericamente */
+  gap: 4px;              /* espaçamento entre "R$" e o valor */
+}
+
+.preco p {
+  font-weight: 700;
+  font-size: 18px;
+  color: #ff0000;
+  margin: 0;
+  word-break: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+
+.titulo {
+  display: flex;
+  flex-direction: row;        /* alinha lado a lado */
+  align-items: center;        /* alinha verticalmente ao centro (opcional) */
+  gap: 10px;                  /* espaço entre legend e p */
+  max-width: 100%;
+  flex-wrap: wrap;            /* permite quebrar para próxima linha se necessário */
+}
+
+.titulo legend {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: black;
+  white-space: nowrap;        /* impede quebra do legend */
+  margin: 0;
+}
+
+.titulo p {
+  font-size: 18px;
+  color: #38383d;
+  word-break: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  margin: 0;
+  flex: 1;                    /* ocupa o espaço restante */
+}
+
+.modal-head legend {
+    font-family: sans-serif;
+    list-style-type: none;
+    color: black;
+}
+
+/* Animação de entrada do modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-content .close:hover {
+  color: #ff0000;
+}
+
+.modal-head {
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0;
+  color: white;
+  justify-content: space-between; /* Alinha os elementos (título e botão salvar) */
+  align-items: center;
+}
+
+.data {
+    top: -10px;
+    right: -10px;
+}
+
+.modal-body {
+    width: 410px;
+    background-color: #0056b3;
+}
+
+.modal-content .close {
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.imgModal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;  /* centraliza horizontalmente */
+  align-items: center;      /* centraliza verticalmente */
+  overflow: hidden;         /* esconde qualquer excesso da imagem */
+}
+
+.imgModal img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+.btnModal {
+  display: flex;
+  align-content: baseline;
+  justify-content: flex-start; /* alinha à esquerda */
+  padding: 10px 20px;
+  margin-left: 25px;
+  margin-top: 150px;
+}

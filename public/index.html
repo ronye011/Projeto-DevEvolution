@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="./../app/assets/img/system/flavicom.svg" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./../app/assets/login.css">
+        <link rel="stylesheet" href="./../app/assets/components/notification.css">
+        <title>SALES+</title>
+    </head>
+    <body>
+        <div class="main">
+        <form id="login" class="login" method="POST">
+            <div class="card">
+                <div class="card-center">
+                    <div class="logoText">SALES+</div>
+                    <h2>Entre na sua conta</h2>
+                </div>
+                <div class="form">
+                    <input class="email" id="email" name="email" type="email" placeholder="E-mail" autocomplete="email">
+                    <input class="password" id="password" name="password" type="password" placeholder="Senha" autocomplete="current-password">
+                    <button type="submit">Entrar</button>
+            </div>
+        </form>
+        </div>
+        <div id="notificacao_system"></div>
+        <script src="./../app/assets/scripts/notification.js"></script>
+        <script src="./../app/assets/scripts/login.js"></script>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="./../app/assets/img/system/flavicom.svg" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./../app/assets/home.css">
+        <link rel="stylesheet" href="./../app/assets/components/modal.css">
+        <link rel="stylesheet" href="./../app/assets/components/grid.css">
+        <link rel="stylesheet" href="./../app/assets/components/notification.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+        <title>SALES+</title>
+    </head>
+    <body>
+        <aside class="sidebar">
+            <div id="leftside-navigation" class="nano">
+              <ul class="nano-content">
+              <li class="margin_top">
+              </li>
+              <li class="sub-menu">
+                <a href="javascript:void(0);">
+                  <span>Cadastros</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="javascript:void(0);" data-home="produtos">Produtos</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" data-home="cupons">Cupons</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sub-menu">
+                <a href="javascript:void(0);">
+                  <span>Vendas</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="javascript:void(0);" data-home="compras">Comprovante</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sub-menu">
+                <a href="javascript:void(0);">
+                  <span>Configurações</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="javascript:void(0);" data-home="usuarios">Usuarios</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sub-menu">
+                <a href="javascript:void(0);">
+                  <span>Logs</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="javascript:void(0);" data-home="logs_compras">Compras</a>
+                  </li>
+                </ul>
+              </li>
+              </ul>
+              <li class="margin_bottom">
+              </li>
+            </div>
+            <div id="user" class="user-info">
+                <p class="user-name" id="nameUserLogged">
+                </p>
+                <a href="./index.html" data="exit" title="Sair do Sistema" class="logout-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="logout" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
+                        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+                    </svg>
+                </a>
+            </div>
+          </aside>
+          <div id="content_menu" class="content_menu">
+            <div id="menus_content">
+              <div class="init">
+                <svg class="initImg" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="white" class="bi bi-alarm-fill" viewBox="0 0 16 16">
+                  <path d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5m2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.04 8.04 0 0 0 .86 5.387M11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.04 8.04 0 0 0-3.527-3.527"/>
+                </svg>
+                <h1 class="initH1">As vendas não esperam! Explore o menu e começe a cadastrar produtos</h1>
+              </div>
+            </div>
+            <div id="notificacao_system">
+            </div>
+            <div id="relatorio">
+            </div>
+          </div>
+      <script src="./../app/assets/scripts/grid.js"></script>
+      <script src="./../app/assets/scripts/notification.js"></script>
+      <script src="./../app/assets/scripts/home.js"></script>
+    </body>
+</html>

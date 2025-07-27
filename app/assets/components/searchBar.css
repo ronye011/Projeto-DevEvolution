@@ -1,0 +1,55 @@
+  /* ===================== */
+  /* BARRA DE PESQUISA     */
+  /* ===================== */
+  .grid {
+    margin-left: 20px;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+  }
+
+  .search {
+    margin-top: 5px;
+    height: 10%;
+    width: 80%;
+    max-width: 80%;
+    font-size: 14px;
+    display: flex;
+    table-layout: fixed;
+    word-wrap: break-word;
+  }
+
+  /* Campo de input (texto) */
+  .search input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+  }
+  
+  /* Efeito ao focar no input */
+  .search input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+  /* Botões */
+    button {
+    background-color: #3d43ff;
+    color: #fff;
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    }
+
+    button:hover {
+    background-color: #4796ea;
+    }
+
+    button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    }  

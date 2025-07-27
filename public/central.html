@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="./../app/assets/img/system/flavicom.svg" type="image/x-icon">
+        <link rel="stylesheet" href="./../app/assets/central.css">
+        <link rel="stylesheet" href="./../app/assets/components/card.css">
+        <link rel="stylesheet" href="./../app/assets/components/notification.css">
+        <link rel="stylesheet" href="./../app/assets/components/searchBar.css">
+        <link rel="stylesheet" href="./../app/assets/components/viewer.css">
+        <link rel="stylesheet" href="./../app/assets/components/success.css">
+        <link rel="stylesheet" href="./../app/assets/components/checkout.css">
+        <title>BUY+</title>
+    </head>
+    <body>
+        <ul class="navBar">
+            <li><a class="active" href="#produtos">Produtos</a></li>
+            <li><a href="./index.html">SALES+</a></li>
+            <li style="float:right"><a href="#BUY+">BUY+</a></li>
+        </ul>
+        <div class="slider-js">
+            <img src="../app/assets/img/system/Banner1.svg" class="slide active">
+            <img src="../app/assets/img/system/Banner2.svg" class="slide">
+            <img src="../app/assets/img/system/Banner3.svg" class="slide">
+        </div>
+        <div id="content_menu">
+            <h1>Produtos</h1>
+            <div class="grid" id="search">
+                <button class="reload" type="button" data="grid-search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                </button>
+                <div class="search">
+                    <input type="text" id="grid-search" name="search" data="grid search" placeholder="Buscar..."></div>  <div class="previous">
+                        <button class="reload" type="button" data="grid previus">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"></path>
+                        </svg>
+                        </button>
+                        <button class="reload" type="button" data="grid reload">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"></path>
+                            <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"></path>
+                        </svg>
+                        </button>
+                        <button class="reload" type="button" data="grid next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
+                        </svg>
+                        </button>
+                        <div data-current-page="0" data-total-page="0"></div>
+                </div>
+            </div>
+            <div id="menus_content">
+                <div id="gridProdutos"></div>
+            </div>
+            <div id="produtoViewer" class='modal'>
+                <div class="modal-content" id="produto" data-idProduto="">
+                    <div class="modal-head">
+                        <div class="data">
+                            <div class="titulo">
+                                <legend>Nome do produto:</legend>
+                                <p id="titulo"></p>
+                            </div>
+                            <div class="descricao">
+                                <legend>Descrição:</legend>
+                                <p id="descricao"></p>
+                            </div>
+                            <div class="preco">
+                                <legend>Valor do produto</legend>
+                                <div class="value">
+                                    <p id="moeda"></p><p id="valor"></p>
+                                </div>
+                            </div>
+                            <div class="estoque">
+                                <legend>Quantidade do produto em estoque</legend>
+                                <div class="group">
+                                    <p class="quantidade" id="quantidade"></p><p id="text">Unidade(s) restante</p>
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="btnModal">
+                                <button class="btn" data="Buy">
+                                    <span>Comprar</span>
+                                    <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4"/>
+                                    <line x1="3" y1="6" x2="21" y2="6"/>
+                                    <path d="M16 10a4 4 0 01-8 0"/>
+                                    </svg>
+                                </button>
+                            </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="imgModal"><img src="../app/assets/img/system/Modal.jpeg" alt="Anuncio"></div>
+                        <span class="close" type="button" data="fecharModal">×</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div id="checkoutModal" style="display: none;" class="modal-custom">
+                <div class="modal-content-custom">
+                    <span class="close-btn" type="button" data="fecharCheckout">×</span>
+                    <div class="checkout-container">
+
+                        <!-- Dados Pessoais -->
+                        <div class="col-pessoal">
+                            <div class="section-title">
+                                <legend>Checkout do Pedido</legend>
+                            </div>
+
+                            <div class="form-group">
+                                <legend>Nome:<span class="require">*</span></legend>
+                                <input type="text" id="nomeCliente" placeholder="Seu nome completo">
+                            </div>
+
+                            <div class="form-group">
+                                <legend>Email:<span class="require">*</span></legend>
+                                <input type="email" id="emailCliente" placeholder="seuemail@exemplo.com">
+                                <p></p>
+                            </div>
+
+                            <div class="form-group">
+                                <legend>Telefone:</legend>
+                                <input type="tel" id="telefoneCliente" placeholder="(00) 00000-0000">
+                            </div>
+
+                            <div class="form-group">
+                                <legend>Código Promocional:</legend>
+                                <div class="promo-group">
+                                    <input type="text" id="codigoPromo" placeholder="Digite o código">
+                                    <button class="btn btn-atualizar" data="atualizarCupom">Atualizar valor</button>
+                                </div>
+                            </div>
+
+                            <div class="final">
+                                <div class="resumo">
+                                    <legend>Valor total:</legend>
+                                    <p id="totalAtual">R$ 0,00</p>
+                                </div>
+
+                                <div class="btnModal2">
+                                    <button class="btn" data="finalizarPedido">
+                                        <span>Finalizar Pedido</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Endereço -->
+                        <div class="col-endereco">
+                            <div class="section-title">
+                                <legend>Endereço de Entrega</legend>
+                            </div>
+
+                            <div class="form-group">
+                                <legend>CEP:<span class="require">*</span></legend>
+                                <input type="text" id="cep" placeholder="00000-000"> 
+                            </div>
+
+                            <div class="form-group">
+                                <legend>Rua:<span class="require">*</span></legend>
+                                <input type="text" id="rua" placeholder="Nome da rua">
+                            </div>
+
+                            <div class="form-group">
+                                <legend>Número:<span class="require">*</span></legend>
+                                <input type="text" id="numero" placeholder="Número da casa ou apartamento">
+                            </div>
+
+                            <div class="form-group">
+                                <legend>Complemento:</legend>
+                                <input type="text" id="complemento" placeholder="Apartamento, bloco, referência (opcional)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sucesso">
+                <div class="congratulation-area text-center mt-5">
+                    <div class="container">
+                        <div class="congratulation-wrapper">
+                            <span class="closeSucesso" type="button" data="fecharModal">×</span>
+                            <div class="congratulation-contents center-text">
+                                <div class="congratulation-contents-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
+                                    </svg>
+                                </div>
+                                <div class="divCenter">
+                                    <h4 class="congratulation-contents-title">Sucesso! </h4>
+                                    <p class="congratulation-contents-para"> Logo sua compra estará em casa. Para pegar seu comprovante entre em contato com o comerciante!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+                Contato <br><br>
+                +55 44 33333-2222 <br>
+                +55 44 33333-2222 <br>
+                +55 44 33333-2222
+            </div>
+        <div id="notificacao_system"></div>
+        <script src="./../app/assets/scripts/notification.js"></script>
+        <script src="./../app/assets/scripts/central.js"></script>
+        <script src="./../app/assets/scripts/slicer.js"></script>
+    </body>
+</html>
