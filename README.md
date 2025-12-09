@@ -1,186 +1,207 @@
-# 🚀 Projeto DevEvolution – SALES+/BUY+
+# 🚀 DevEvolution Project – SALES+/BUY+
 
-Sistema de vendas de produtos desenvolvido durante a imersão **Dev{Evolution}**, promovida pela **IXC Soft S.A.**  
-Este projeto foi construído com base na arquitetura **MVC**, implementando funcionalidades como cadastro de produtos, usuários, cupons, controle de estoque e geração de comprovantes em PDF.
+Product sales system developed during the **Dev{Evolution}** immersion program, promoted by **IXC Soft S.A.**
 
----
-
-## Descrição
-
-O **SALES+/BUY+** é um sistema de gestão de vendas que permite:
-
-- Gerenciar usuários, produtos e cupons.
-- Realizar compras com reserva de estoque.
-- Gerar comprovantes em PDF.
-- Aplicar descontos promocionais via cupons.
-- Visualizar logs e histórico de compras.
-
-> Algumas funcionalidades podem estar incompletas, pois o sistema foi desenvolvido em apenas duas semanas.
+This project was built based on the **MVC** architecture, implementing functionalities such as product registration, user management, coupon management, inventory control, and PDF receipt generation.
 
 ---
 
-## ⚙️ Pré-requisitos
+## Description
 
-- Composer 2.8 ou superior
-- DomPDF 3.1 ou superior
-- PHP 8.2 ou superior
+The **SALES+/BUY+** is a sales management system that allows you to:
+
+- Manage users, products, and coupons.
+
+- Make purchases with stock reservation.
+
+- Generate PDF receipts.
+
+- Apply promotional discounts via coupons.
+
+- View purchase logs and history.
+
+> Some functionalities may be incomplete, as the system was developed in only two weeks.
+
+---
+
+## ⚙️ Prerequisites
+
+- Composer 2.8 or higher
+- DomPDF 3.1 or higher
+- PHP 8.2 or higher
 - PHP-XML
 - SQLite
 - Git
 
 ---
 
-## 📦 Instalação
+## 📦 Installation
 
-### 1. Baixe o arquivo de nome install.sh do repositorio:
+### 1. Download the file named install.sh from the repository:
 
-### 2. Acesse o usuário root do Debian/Ubuntu no terminal
+### 2. Access the root user of Debian/Ubuntu in the terminal
 
 > `su` Debian
 > `sudo su` Ubuntu
 
-### 3. Acesse a pasta que você baixou o arquivo install.sh (Normalmente na pasta Downloads)
+### 3. Access the folder where you downloaded the install.sh file (Usually in the Downloads folder)
 
 > `cd /home/user/Downloads/`
 
-### 4. Transforme o arquivo install.sh em um arquivo execultavel
+### 4. Make the install.sh file executable
 
 > `chmod +x install.sh`
 
-### 5. Por fim execulte o arquivo
+### 5. Finally, execute the file
 
 > `./install.sh`
 
-### 6. Agora é só acessar os links no navegador para explorar o sistema
-Principais links:
-- `http://localhost/sistema/public/` Login do painel
-- `http://localhost/sistema/public/home.html` Painel de Administração
-- `http://localhost/sistema/public/central.html` Local de compra pelo cliente
-  
+### 6. Now just access the links in your browser to explore the system.
+Main links:
+- `http://localhost/sistema/public/` Panel login
+- `http://localhost/sistema/public/home.html` Administration panel
+- `http://localhost/sistema/public/central.html` Customer purchase location
+
 ---
 
-## Após a instalação, para logar no sistema pode ser utlizado as seguintes credenciais para teste.
+## After installation, the following credentials can be used to log into the system for testing.
 
 Email: adm@adm.com
-Senha: teste
+Password: teste
 
 ---
 
-### O que foi implementado?
+### What was implemented?
 
-### Usuários
+### Users
 
-- [X]  Criar (cadastro via formulário HTML)
-- [X]  Editar e deletar (somente próprios dados)
-- [X]  Ver (lista restrita)
+- [X] Create (registration via HTML form)
+- [X] Edit and delete (own data only)
+- [X] View (restricted list)
 
-### Produtos / Ingressos
+### Products / Tickets
 
-- [X]  Criar, editar, deletar, visualizar
-- [X]  Reserva de estoque em tempo real (com `data_reserva`)
-- [X]  Bloqueio por 2 minutos ao acessar o último item
+- [X] Create, edit, delete, view
+- [X] Real-time stock reservation (with `reservation_date`)
+- [X] 2-minute lockout when accessing the last item
 
-### Clientes
+### Clients
 
-- [X]  Criar, editar, deletar (restrito por usuário) OBS: Neste sistema não editamos o cliente diretamente, mas há um processamento interno para registrar os dados.
-- [X]  Visualização restrita por usuário (não veem outros clientes)
+- [X] Create, edit, delete (restricted per user) NOTE: In this system, we do not edit the client directly, but there is an internal processing to register the data.
 
-### Compras
+- [X] Restricted user view (other customers cannot see)
 
-- [X]  Comprar produto, com controle de estoque
-- [X]  Cancelar reserva após timeout (2 minutos)
-- [X]  Exibir mensagem de "Produto indisponível" se esgotado
+### Purchases
+
+- [X] Purchase product, with stock control
+- [X] Cancel reservation after timeout (2 minutes)
+- [X] Display "Product unavailable" message if sold out
 
 ---
 
 ### Bonus
 
-**Histórico de compras**
-- [X]   Inserir um sistema de logs de compras de ingressos/produtos.
-- [X]   Permitir que o usuário veja todas as compras feitas
-      
-**Geração de comprovante em PDF**
-- [X]   Usado `dompdf/dompdf`
-      
-**Códigos de desconto / cupom**
-- [X]   Campo promocional que reduz o preço
-      
+**Purchase History**
+
+- [X] Insert a system for logging ticket/product purchases.
+
+- [X] Allow the user to view all purchases made
+
+**PDF Receipt Generation**
+
+- [X] Used `dompdf/dompdf`
+
+**Discount Codes / Coupons**
+
+- [X] Promotional field that reduces the price
+
 ---
 
-Diagrama de funcionamento da compra:
+Purchase Operation Diagram:
 
 ```mermaid
 graph TD;
-    Comprar--> Detalhamento;
-    Detalhamento --> Comprar2;
-    Comprar2 --> Finalizar;
-    Comprar2 --> Desconto;
-    Desconto --> Finalizar;
+
+Purchase --> Details;
+Details --> Purchase 2;
+Purchase 2 --> Finalize;
+Purchase 2 --> Discount;
+Discount --> Finish;
+
 ```
 
-Diagrama de funcionamento do produto:
+Product Functioning Diagram:
 
 ```mermaid
 graph TD;
-    Sistema --> Cadastros;
-    Cadastros --> Produtos;
-    Produtos --> Novo;
-    Produtos --> Deletar;
-    Produtos --> Editar;
-    Deletar --> Produtos;
-    Editar --> Salvar;
-    Novo --> Salvar;
+System --> Registrations;
+Registrations --> Products;
+Products --> New;
+Products --> Delete;
+Products --> Edit;
+Delete --> Products;
+Edit --> Save;
+New --> Save;
+
 ```
 
-Diagrama de funcionamento do cupom:
+Coupon Functioning Diagram:
 
 ```mermaid
 graph TD;
-    Sistema--> Cadastros;
-    Cadastros --> Cupons;
-    Cupons --> Novo;
-    Novo --> Salvar;
-    Cupons --> Inutilizar;
-    Cupons --> Editar;
-    Inutilizar --> Cupons;
-    Editar --> Salvar;
+System --> Registrations;
+Registrations --> Coupons;
+Coupons --> New;
+New --> Save;
+Coupons --> Invalidate;
+Coupons --> Edit;
+Invalidate --> Coupons;
+Edit --> Save;
+
+``` User Functioning Diagram:
+
+```mermaid
+graph TD;
+System --> Settings;
+Settings --> Users;
+
+Users --> New;
+
+Users --> Deactivate/Activate;
+
+Deactivate/Activate --> Users;
+
+Users --> Edit;
+
+New --> Save;
+
+Edit --> Save;
+
+``
+
+Purchase operation diagram:
+
+```mermaid
+graph TD;
+System --> Sales;
+Sales --> Receipt;
+Receipt --> Print;
 ```
-Diagrama de funcionamento de usuarios:
+
+Purchase logs operation diagram:
 
 ```mermaid
 graph TD;
-    Sistema--> Configurações;
-    Configurações --> Usuarios;
-    Usuarios --> Novo;
-    Usuarios --> Inativar/Ativar;
-    Inativar/Ativar --> Usuarios;
-    Usuarios --> Editar;
-    Novo --> Salvar;
-    Editar --> Salvar;
+System --> Logs;
+Logs --> Purchases;
+
 ```
 
-Diagrama de funcionamento da compra:
+Customer operation diagram (internal):
 
 ```mermaid
 graph TD;
-    Sistema--> Vendas;
-    Vendas --> Comprovante;
-    Comprovante --> Imprimir;
-```
-
-Diagrama de funcionamento dos logs_compra:
-
-```mermaid
-graph TD;
-    Sistema--> Logs;
-    Logs --> Compras;
-```
-
-Diagrama de funcionamento dos clientes (interno):
-
-```mermaid
-graph TD;
-    FinalizarCompra --> Cria/Edita;
-    Cria/Edita --> Salvar;
-    Salvar --> VinculaCompra;
+FinalizePurchase --> Create/Edit;
+Create/Edit --> Save;
+Save --> LinkPurchase;
 ```
