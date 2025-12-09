@@ -123,9 +123,9 @@ Purchase Operation Diagram:
 graph TD;
 
 Purchase --> Details;
-Details --> Purchase 2;
-Purchase 2 --> Finalize;
-Purchase 2 --> Discount;
+Details --> Purchase2;
+Purchase2 --> Finalize;
+Purchase2 --> Discount;
 Discount --> Finish;
 
 ```
