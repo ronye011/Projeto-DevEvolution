@@ -158,7 +158,9 @@ Coupons --> Edit;
 Invalidate --> Coupons;
 Edit --> Save;
 
-``` User Functioning Diagram:
+```
+
+User Functioning Diagram:
 
 ```mermaid
 graph TD;
