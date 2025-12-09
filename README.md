@@ -164,17 +164,11 @@ Edit --> Save;
 graph TD;
 System --> Settings;
 Settings --> Users;
-
 Users --> New;
-
 Users --> Deactivate/Activate;
-
 Deactivate/Activate --> Users;
-
 Users --> Edit;
-
 New --> Save;
-
 Edit --> Save;
 
 ``
